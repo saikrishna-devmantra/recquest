@@ -1,0 +1,89 @@
+name: recquest_21
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  get: ^4.6.5
+  connectivity_plus: ^2.3.6
+  shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.1
+  flutter_svg: ^1.1.6
+  google_sign_in: ^5.0.7
+  flutter_login_facebook: ^1.6.2
+  flutter_svg_provider: ^1.0.3
+  smooth_page_indicator: ^1.0.0+2
+  flutter_staggered_grid_view: ^0.4.1
+  pin_code_fields: ^7.3.0
+  sms_autofill: ^2.0.0
+  intl: ^0.17.0
+  url_launcher: 6.0.20
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Poppins
+      fonts: 
+        - asset: assets/fonts/PoppinsSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+        - asset: assets/fonts/PoppinsBold.ttf
+          weight: 700
+    - family: Asap
+      fonts: 
+        - asset: assets/fonts/AsapRomanSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AsapRomanRegular.ttf
+          weight: 400
+        - asset: assets/fonts/AsapRomanBold.ttf
+          weight: 700
+        - asset: assets/fonts/AsapRomanMedium.ttf
+          weight: 500
+        - asset: assets/fonts/AsapItalicBold.ttf
+          weight: 700
+        - asset: assets/fonts/AsapItalicRegular.ttf
+          weight: 400
+        - asset: assets/fonts/AsapItalicMedium.ttf
+          weight: 500
+    - family: Birthstone
+      fonts: 
+        - asset: assets/fonts/BirthstoneRegular.ttf
+          weight: 400
+    - family: Inter
+      fonts: 
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+    - family: Arima Madurai
+      fonts: 
+        - asset: assets/fonts/ArimaMaduraiBold.ttf
+          weight: 700
+    - family: Asul
+      fonts: 
+        - asset: assets/fonts/AsulRegular.ttf
+          weight: 400
+    - family: Montserrat
+      fonts: 
+        - asset: assets/fonts/MontserratRomanSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/MontserratRomanRegular.ttf
+          weight: 400
+        - asset: assets/fonts/MontserratRomanMedium.ttf
+          weight: 500
+        - asset: assets/fonts/MontserratRomanBold.ttf
+          weight: 700
+    - family: Roboto
+      fonts: 
+        - asset: assets/fonts/RobotoBold.ttf
+          weight: 700
+        - asset: assets/fonts/RobotoRegular.ttf
+          weight: 400
