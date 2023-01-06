@@ -212,24 +212,24 @@ class OrganizerProfileEventsScreen
                                                     MainAxisAlignment
                                                         .spaceBetween,
                                                 children: [
-                                                  CustomButton(
-                                                      height: 43,
-                                                      width: 134,
-                                                      text: "lbl_follow".tr,
-                                                      variant: ButtonVariant
-                                                          .OutlineWhiteA700,
-                                                      shape: ButtonShape
-                                                          .RoundedBorder10,
-                                                      padding: ButtonPadding
-                                                          .PaddingT11,
-                                                      fontStyle: ButtonFontStyle
-                                                          .AsapItalicBold16WhiteA700,
-                                                      prefixWidget: Container(
-                                                          margin: getMargin(
-                                                              right: 9),
-                                                          child: CustomImageView(
-                                                              svgPath: ImageConstant
-                                                                  .imgGroup18531))),
+                                                  // CustomButton(
+                                                  //     height: 43,
+                                                  //     width: 134,
+                                                  //     text: "lbl_follow".tr,
+                                                  //     variant: ButtonVariant
+                                                  //         .OutlineWhiteA700,
+                                                  //     shape: ButtonShape
+                                                  //         .RoundedBorder10,
+                                                  //     padding: ButtonPadding
+                                                  //         .PaddingT11,
+                                                  //     fontStyle: ButtonFontStyle
+                                                  //         .AsapItalicBold16WhiteA700,
+                                                  //     prefixWidget: Container(
+                                                  //         margin: getMargin(
+                                                  //             right: 9),
+                                                  //         child: CustomImageView(
+                                                  //             svgPath: ImageConstant
+                                                  //                 .imgGroup18531))),
                                                   CustomButton(
                                                       height: 43,
                                                       width: 134,

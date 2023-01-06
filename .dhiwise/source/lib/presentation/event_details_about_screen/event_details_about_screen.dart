@@ -94,13 +94,13 @@ class EventDetailsAboutScreen extends GetWidget<EventDetailsAboutController> {
                                                                                     Padding(padding: getPadding(top: 2), child: Text("lbl_123k_friends".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtAsapRomanMedium12))
                                                                                   ]))),
                                                                           Spacer(),
-                                                                          CustomButton(
-                                                                              height: 28,
-                                                                              width: 69,
-                                                                              text: "lbl_follow".tr,
-                                                                              margin: getMargin(top: 8, bottom: 8),
-                                                                              variant: ButtonVariant.OutlineCyan30014,
-                                                                              fontStyle: ButtonFontStyle.MontserratRomanSemiBold12)
+                                                                          // CustomButton(
+                                                                          //     height: 28,
+                                                                          //     width: 69,
+                                                                          //     text: "lbl_follow".tr,
+                                                                          //     margin: getMargin(top: 8, bottom: 8),
+                                                                          //     variant: ButtonVariant.OutlineCyan30014,
+                                                                          //     fontStyle: ButtonFontStyle.MontserratRomanSemiBold12)
                                                                         ]))
                                                               ])))
                                                 ])),
@@ -213,24 +213,24 @@ class EventDetailsAboutScreen extends GetWidget<EventDetailsAboutController> {
                                                                             .AsapRomanBold12,
                                                                     onTap:
                                                                         onTapInvite),
-                                                                CustomButton(
-                                                                    height: 28,
-                                                                    width: 67,
-                                                                    text:
-                                                                        "lbl_share"
-                                                                            .tr,
-                                                                    margin:
-                                                                        getMargin(
-                                                                            top:
-                                                                                4),
-                                                                    variant:
-                                                                        ButtonVariant
-                                                                            .OutlineCyan30014_1,
-                                                                    fontStyle:
-                                                                        ButtonFontStyle
-                                                                            .AsapRomanBold12,
-                                                                    onTap:
-                                                                        onTapShare)
+                                                                // CustomButton(
+                                                                //     height: 28,
+                                                                //     width: 67,
+                                                                //     text:
+                                                                //         "lbl_share"
+                                                                //             .tr,
+                                                                //     margin:
+                                                                //         getMargin(
+                                                                //             top:
+                                                                //                 4),
+                                                                //     variant:
+                                                                //         ButtonVariant
+                                                                //             .OutlineCyan30014_1,
+                                                                //     fontStyle:
+                                                                //         ButtonFontStyle
+                                                                //             .AsapRomanBold12,
+                                                                //     onTap:
+                                                                //         onTapShare)
                                                               ]))
                                                     ]))),
                                         Padding(

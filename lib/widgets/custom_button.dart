@@ -196,7 +196,6 @@ class CustomButton extends StatelessWidget {
         );
       default:
         return null;
-        ;
     }
   }
 

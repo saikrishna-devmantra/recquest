@@ -32,8 +32,8 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                         child: Text("lbl_app_navigation".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.center,
-                                            style:
-                                                AppStyle.txtRobotoRegular20))),
+                                            style: AppStyle
+                                                .txtPoppinsSemiBold18))),
                                 Align(
                                     alignment: Alignment.centerLeft,
                                     child: Padding(
@@ -41,8 +41,8 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                         child: Text("msg_check_your_app_s".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.center,
-                                            style:
-                                                AppStyle.txtRobotoRegular16))),
+                                            style: AppStyle
+                                                .txtPoppinsSemiBold18))),
                                 Container(
                                     height: getVerticalSize(1.00),
                                     width: size.width,
@@ -92,7 +92,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -137,7 +137,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -182,7 +182,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -227,7 +227,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -272,7 +272,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -317,7 +317,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -362,7 +362,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -407,7 +407,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -452,7 +452,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -497,7 +497,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -542,7 +542,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -587,7 +587,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -632,7 +632,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -677,7 +677,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -722,7 +722,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -767,7 +767,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -812,7 +812,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -857,7 +857,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -902,7 +902,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -947,7 +947,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -992,7 +992,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1037,7 +1037,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1082,7 +1082,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1127,7 +1127,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1172,7 +1172,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1217,7 +1217,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1262,7 +1262,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1307,7 +1307,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1352,7 +1352,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1397,7 +1397,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1442,7 +1442,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1487,7 +1487,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1532,7 +1532,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1577,7 +1577,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1622,7 +1622,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(
@@ -1667,7 +1667,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20))),
+                                                                      .txtPoppinsSemiBold18))),
                                                       Container(
                                                           height:
                                                               getVerticalSize(

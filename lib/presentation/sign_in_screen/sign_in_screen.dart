@@ -1,3 +1,8 @@
+import 'dart:convert';
+
+import 'package:recquest_21/api/api_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'controller/sign_in_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
@@ -14,6 +19,8 @@ class SignInScreen extends GetWidget<SignInController> {
 
   @override
   Widget build(BuildContext context) {
+    controller.emailController.text = 'saikrishnaporala@gmail.com';
+    controller.passwordOneController.text = 'sksg@1010';
     return SafeArea(
         child: Scaffold(
             backgroundColor: ColorConstant.gray10001,
@@ -214,8 +221,29 @@ class SignInScreen extends GetWidget<SignInController> {
     Get.toNamed(AppRoutes.forgotPasswordScreen);
   }
 
-  onTapLogin() {
-    Get.toNamed(AppRoutes.mainhomeContainerScreen);
+  onTapLogin() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      APIHandler apiClient = APIHandler();
+
+      dynamic loginObj = {
+        'email': controller.emailController.text,
+        'password': controller.passwordOneController.text,
+      };
+
+      dynamic response = await apiClient.post('/login', data: loginObj);
+
+      dynamic resondeData = response.data;
+
+      prefs.setString('access_token', resondeData['access_token']);
+      prefs.setString('fullName', resondeData['user']['firstname']);
+      prefs.setString('email', resondeData['user']['email']);
+      Get.snackbar('Success', 'Login Success.');
+      Get.toNamed(AppRoutes.mainhomeContainerScreen);
+    } catch (onError) {
+      print(onError);
+      Get.snackbar('Error', onError.toString());
+    }
   }
 
   onTapBtntf() async {

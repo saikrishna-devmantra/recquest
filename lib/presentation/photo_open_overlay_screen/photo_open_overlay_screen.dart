@@ -74,7 +74,7 @@ class PhotoOpenOverlayScreen extends GetWidget<PhotoOpenOverlayController> {
                                   "lbl_ridhwan_nordin".tr,
                                   overflow: TextOverflow.ellipsis,
                                   textAlign: TextAlign.left,
-                                  style: AppStyle.txtRobotoBold13,
+                                  style: AppStyle.txtPoppinsSemiBold18,
                                 ),
                               ),
                               Align(
@@ -87,7 +87,7 @@ class PhotoOpenOverlayScreen extends GetWidget<PhotoOpenOverlayController> {
                                     "lbl_ridzjcob".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle.txtRobotoRegular11,
+                                    style: AppStyle.txtPoppinsSemiBold18,
                                   ),
                                 ),
                               ),
