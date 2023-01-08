@@ -3,13 +3,15 @@ import 'package:recquest_21/presentation/personal_information_screen/models/pers
 import 'package:flutter/material.dart';
 
 class PersonalInformationController extends GetxController {
+  TextEditingController groupFiftyThreeController = TextEditingController();
+
+  TextEditingController groupFiftySevenController = TextEditingController();
+
   TextEditingController emailController = TextEditingController();
 
-  TextEditingController emailOneController = TextEditingController();
+  TextEditingController groupFiftyFiveController = TextEditingController();
 
-  TextEditingController emailTwoController = TextEditingController();
-
-  TextEditingController emailThreeController = TextEditingController();
+  TextEditingController groupFiftySixController = TextEditingController();
 
   TextEditingController inputController = TextEditingController();
 
@@ -24,10 +26,11 @@ class PersonalInformationController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+    groupFiftyThreeController.dispose();
+    groupFiftySevenController.dispose();
     emailController.dispose();
-    emailOneController.dispose();
-    emailTwoController.dispose();
-    emailThreeController.dispose();
+    groupFiftyFiveController.dispose();
+    groupFiftySixController.dispose();
     inputController.dispose();
   }
 }

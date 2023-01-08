@@ -127,7 +127,7 @@ class MainhomeItemWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "msg_international_band".tr,
+                            "internationaasdasl_band",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtAsapRomanBold14,

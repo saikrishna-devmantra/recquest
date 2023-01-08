@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
 import 'package:recquest_21/presentation/forgot_password_verification_screen/models/forgot_password_verification_model.dart';
 
 class ForgotPasswordVerificationController extends GetxController {
+  TextEditingController otpinputController = TextEditingController();
   Rx<ForgotPasswordVerificationModel> forgotPasswordVerificationModelObj =
       ForgotPasswordVerificationModel().obs;
 

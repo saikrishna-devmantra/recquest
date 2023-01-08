@@ -20,183 +20,164 @@ class PicturesScreen extends GetWidget<PicturesController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            backgroundColor: ColorConstant.gray10001,
-            appBar: CustomAppBar(
-                height: getVerticalSize(60.00),
-                leadingWidth: 59,
-                leading: AppbarCircleimage(
-                    imagePath: ImageConstant.imgOvalcopy5,
-                    margin: getMargin(left: 19, top: 10, bottom: 10),
-                    onTap: onTapOvalCopyFive3),
-                title: Row(children: [
-                  AppbarImage(
-                      height: getVerticalSize(24.00),
-                      width: getHorizontalSize(23.00),
-                      svgPath: ImageConstant.imgContrast24x26,
-                      margin: getMargin(left: 10, top: 19, bottom: 16)),
-                  Container(
-                      height: getVerticalSize(26.00),
-                      width: getHorizontalSize(1.00),
-                      margin: getMargin(left: 9, top: 17, bottom: 16),
-                      decoration:
-                          BoxDecoration(color: ColorConstant.indigo300)),
-                  AppbarSubtitle(
-                      text: "lbl_search".tr,
-                      margin: getMargin(left: 10, top: 15, bottom: 16))
-                ]),
-                actions: [
-                  AppbarButton(
-                      margin:
-                          getMargin(left: 19, top: 14, right: 19, bottom: 14),
-                      onTap: onTapFilters1)
-                ],
-                styleType: Style.bgFillBluegray90002),
-            body: SizedBox(
-                width: size.width,
-                child: SingleChildScrollView(
-                    child: Container(
-                        height: getVerticalSize(901.00),
-                        width: size.width,
-                        margin: getMargin(top: 10),
-                        child:
-                            Stack(alignment: Alignment.bottomCenter, children: [
-                          Align(
-                              alignment: Alignment.center,
-                              child: Padding(
-                                  padding: getPadding(left: 16, right: 16),
-                                  child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Row(
+      child: Scaffold(
+        backgroundColor: ColorConstant.gray10001,
+        appBar: CustomAppBar(
+            height: getVerticalSize(60.00),
+            leadingWidth: 59,
+            leading: AppbarCircleimage(
+                imagePath: ImageConstant.imgOvalcopy5,
+                margin: getMargin(left: 19, top: 10, bottom: 10),
+                onTap: onTapOvalCopyFive3),
+            title: Row(children: [
+              AppbarImage(
+                  height: getVerticalSize(24.00),
+                  width: getHorizontalSize(23.00),
+                  svgPath: ImageConstant.imgContrast24x26,
+                  margin: getMargin(left: 10, top: 19, bottom: 16)),
+              Container(
+                  height: getVerticalSize(26.00),
+                  width: getHorizontalSize(1.00),
+                  margin: getMargin(left: 9, top: 17, bottom: 16),
+                  decoration: BoxDecoration(color: ColorConstant.indigo300)),
+              AppbarSubtitle(
+                  text: "lbl_search".tr,
+                  margin: getMargin(left: 10, top: 15, bottom: 16))
+            ]),
+            actions: [
+              AppbarButton(
+                  margin: getMargin(left: 19, top: 14, right: 19, bottom: 14),
+                  onTap: onTapFilters1)
+            ],
+            styleType: Style.bgFillBluegray90002),
+        body: SizedBox(
+            width: size.width,
+            child: SingleChildScrollView(
+                child: Container(
+                    height: getVerticalSize(901.00),
+                    width: size.width,
+                    margin: getMargin(top: 10),
+                    child: Stack(alignment: Alignment.bottomCenter, children: [
+                      Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                              padding: getPadding(left: 16, right: 16),
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          CustomImageView(
+                                              imagePath:
+                                                  ImageConstant.imgRectangle8,
+                                              height: getVerticalSize(140.00),
+                                              width: getHorizontalSize(196.00),
+                                              onTap: () {
+                                                onTapImgRectangleEight();
+                                              }),
+                                          CustomImageView(
+                                              imagePath:
+                                                  ImageConstant.imgRectangle6,
+                                              height: getVerticalSize(140.00),
+                                              width: getHorizontalSize(135.00),
+                                              onTap: () {
+                                                onTapImgRectangleSix();
+                                              })
+                                        ]),
+                                    CustomImageView(
+                                        imagePath: ImageConstant.imgRectangle9,
+                                        height: getVerticalSize(210.00),
+                                        width: getHorizontalSize(343.00),
+                                        margin: getMargin(top: 13),
+                                        onTap: () {
+                                          onTapImgRectangleNine();
+                                        }),
+                                    Padding(
+                                        padding: getPadding(top: 13),
+                                        child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               CustomImageView(
                                                   imagePath: ImageConstant
-                                                      .imgRectangle8,
+                                                      .imgRectangle7,
                                                   height:
-                                                      getVerticalSize(140.00),
-                                                  width:
-                                                      getHorizontalSize(196.00),
-                                                  onTap: () {
-                                                    onTapImgRectangleEight();
-                                                  }),
-                                              CustomImageView(
-                                                  imagePath: ImageConstant
-                                                      .imgRectangle6,
-                                                  height:
-                                                      getVerticalSize(140.00),
+                                                      getVerticalSize(177.00),
                                                   width:
                                                       getHorizontalSize(135.00),
                                                   onTap: () {
-                                                    onTapImgRectangleSix();
+                                                    onTapImgRectangleSeven();
+                                                  }),
+                                              CustomImageView(
+                                                  imagePath: ImageConstant
+                                                      .imgRectangle5,
+                                                  height:
+                                                      getVerticalSize(177.00),
+                                                  width:
+                                                      getHorizontalSize(196.00),
+                                                  onTap: () {
+                                                    onTapImgRectangleFive();
                                                   })
-                                            ]),
-                                        CustomImageView(
-                                            imagePath:
-                                                ImageConstant.imgRectangle9,
-                                            height: getVerticalSize(210.00),
-                                            width: getHorizontalSize(343.00),
-                                            margin: getMargin(top: 13),
-                                            onTap: () {
-                                              onTapImgRectangleNine();
-                                            }),
-                                        Padding(
-                                            padding: getPadding(top: 13),
-                                            child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  CustomImageView(
-                                                      imagePath: ImageConstant
-                                                          .imgRectangle7,
-                                                      height: getVerticalSize(
-                                                          177.00),
-                                                      width: getHorizontalSize(
-                                                          135.00),
-                                                      onTap: () {
-                                                        onTapImgRectangleSeven();
-                                                      }),
-                                                  CustomImageView(
-                                                      imagePath: ImageConstant
-                                                          .imgRectangle5,
-                                                      height: getVerticalSize(
-                                                          177.00),
-                                                      width: getHorizontalSize(
-                                                          196.00),
-                                                      onTap: () {
-                                                        onTapImgRectangleFive();
-                                                      })
-                                                ])),
-                                        Padding(
-                                            padding: getPadding(top: 13),
-                                            child: Obx(() =>
-                                                StaggeredGridView.countBuilder(
-                                                    shrinkWrap: true,
-                                                    primary: false,
-                                                    crossAxisCount: 4,
-                                                    crossAxisSpacing:
-                                                        getHorizontalSize(
-                                                            11.54),
-                                                    mainAxisSpacing:
-                                                        getHorizontalSize(
-                                                            11.54),
-                                                    staggeredTileBuilder:
-                                                        (index) {
-                                                      return StaggeredTile.fit(
-                                                          2);
-                                                    },
-                                                    itemCount: controller
-                                                        .picturesModelObj
-                                                        .value
-                                                        .picturesItemList
-                                                        .length,
-                                                    itemBuilder:
-                                                        (context, index) {
-                                                      PicturesItemModel model =
-                                                          controller
+                                            ])),
+                                    Padding(
+                                        padding: getPadding(top: 13),
+                                        child: Obx(() =>
+                                            StaggeredGridView.countBuilder(
+                                                shrinkWrap: true,
+                                                primary: false,
+                                                crossAxisCount: 4,
+                                                crossAxisSpacing:
+                                                    getHorizontalSize(11.54),
+                                                mainAxisSpacing:
+                                                    getHorizontalSize(11.54),
+                                                staggeredTileBuilder: (index) {
+                                                  return StaggeredTile.fit(2);
+                                                },
+                                                itemCount: controller
+                                                    .picturesModelObj
+                                                    .value
+                                                    .picturesItemList
+                                                    .length,
+                                                itemBuilder: (context, index) {
+                                                  PicturesItemModel model =
+                                                      controller
                                                               .picturesModelObj
                                                               .value
-                                                              .picturesItemList[index];
-                                                      return PicturesItemWidget(
-                                                          model,
-                                                          onTapImgRectangle:
-                                                              onTapImgRectangle);
-                                                    })))
-                                      ]))),
-                          Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                  width: size.width,
-                                  margin: getMargin(bottom: 159),
-                                  padding: getPadding(
-                                      left: 151, top: 4, right: 151, bottom: 4),
-                                  decoration: AppDecoration.fillWhiteA700,
-                                  child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                            height: getVerticalSize(2.00),
-                                            width: getHorizontalSize(72.00),
-                                            margin: getMargin(top: 4),
-                                            decoration: BoxDecoration(
-                                                color: ColorConstant.gray9007f,
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        getHorizontalSize(
-                                                            1.00))))
-                                      ])))
-                        ])))),
-            bottomNavigationBar:
-                CustomBottomBar(onChanged: (BottomBarEnum type) {
-              Get.toNamed(getCurrentRoute(type), id: 1);
-            })));
+                                                              .picturesItemList[
+                                                          index];
+                                                  return PicturesItemWidget(
+                                                      model,
+                                                      onTapImgRectangle:
+                                                          onTapImgRectangle);
+                                                })))
+                                  ]))),
+                      Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Container(
+                              width: size.width,
+                              margin: getMargin(bottom: 159),
+                              padding: getPadding(
+                                  left: 151, top: 4, right: 151, bottom: 4),
+                              decoration: AppDecoration.fillWhiteA700,
+                              child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        height: getVerticalSize(2.00),
+                                        width: getHorizontalSize(72.00),
+                                        margin: getMargin(top: 4),
+                                        decoration: BoxDecoration(
+                                            color: ColorConstant.gray9007f,
+                                            borderRadius: BorderRadius.circular(
+                                                getHorizontalSize(1.00))))
+                                  ])))
+                    ])))),
+      ),
+    );
   }
 
   ///Handling route based on bottom click actions

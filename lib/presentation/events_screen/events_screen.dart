@@ -101,11 +101,6 @@ class EventsScreen extends GetWidget<EventsController> {
                                                 getHorizontalSize(1.00))))
                                   ]))
                         ])))),
-        // bottomNavigationBar: CustomBottomBar(
-        //   onChanged: (BottomBarEnum type) {
-        //     Get.toNamed(getCurrentRoute(type), id: 1);
-        //   },
-        // ),
       ),
     );
   }

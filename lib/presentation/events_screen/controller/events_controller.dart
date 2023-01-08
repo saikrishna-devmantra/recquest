@@ -7,7 +7,7 @@ class EventsController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    Get.toNamed(AppRoutes.mapViewScreen);
+    // Get.toNamed(AppRoutes.mapViewScreen);
   }
 
   @override

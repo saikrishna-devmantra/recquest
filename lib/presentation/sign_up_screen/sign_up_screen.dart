@@ -1,3 +1,6 @@
+import 'package:recquest_21/api/api_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'controller/sign_up_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
@@ -50,17 +53,38 @@ class SignUpScreen extends GetWidget<SignUpController> {
                           CustomTextFormField(
                               width: 340,
                               focusNode: FocusNode(),
-                              controller: controller.groupFiftyFiveController,
-                              hintText: "lbl_full_name".tr,
-                              margin: getMargin(left: 1, top: 28),
+                              controller: controller.firstNameController,
+                              hintText: "lbl_first_name".tr,
+                              margin: getMargin(left: 1, top: 13),
                               fontStyle:
                                   TextFormFieldFontStyle.AsapRomanRegular14,
                               suffix: Container(
                                   margin: getMargin(
                                       left: 30, top: 13, right: 16, bottom: 13),
                                   child: CustomImageView(
-                                      svgPath:
-                                          ImageConstant.imgCheckmark26x24)),
+                                      svgPath: ImageConstant.imgCheckmark)),
+                              suffixConstraints: BoxConstraints(
+                                  minWidth: getHorizontalSize(24.00),
+                                  minHeight: getVerticalSize(26.00)),
+                              validator: (value) {
+                                if (!isText(value)) {
+                                  return "Please enter valid text";
+                                }
+                                return null;
+                              }),
+                          CustomTextFormField(
+                              width: 340,
+                              focusNode: FocusNode(),
+                              controller: controller.lastNameController,
+                              hintText: "lbl_last_name".tr,
+                              margin: getMargin(left: 1, top: 7),
+                              fontStyle:
+                                  TextFormFieldFontStyle.AsapRomanRegular14,
+                              suffix: Container(
+                                  margin: getMargin(
+                                      left: 30, top: 13, right: 16, bottom: 13),
+                                  child: CustomImageView(
+                                      svgPath: ImageConstant.imgCheckmark)),
                               suffixConstraints: BoxConstraints(
                                   minWidth: getHorizontalSize(24.00),
                                   minHeight: getVerticalSize(26.00)),
@@ -97,7 +121,7 @@ class SignUpScreen extends GetWidget<SignUpController> {
                           Obx(() => CustomTextFormField(
                               width: 340,
                               focusNode: FocusNode(),
-                              controller: controller.groupFiftyFourController,
+                              controller: controller.passwordController,
                               hintText: "lbl_password".tr,
                               margin: getMargin(left: 1, top: 9),
                               fontStyle:
@@ -133,7 +157,8 @@ class SignUpScreen extends GetWidget<SignUpController> {
                           Obx(() => CustomTextFormField(
                               width: 340,
                               focusNode: FocusNode(),
-                              controller: controller.groupFiftySixController,
+                              controller:
+                                  controller.passwordConfirmationController,
                               hintText: "msg_confirm_password".tr,
                               margin: getMargin(left: 1, top: 8),
                               padding: TextFormFieldPadding.PaddingT12,
@@ -253,8 +278,38 @@ class SignUpScreen extends GetWidget<SignUpController> {
     Get.toNamed(AppRoutes.signInScreen);
   }
 
-  onTapCreateaccount() {
-    Get.toNamed(AppRoutes.signUpVerificationScreen);
+  onTapCreateaccount() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      APIHandler apiClient = APIHandler();
+
+      dynamic signupObj = {
+        "firstname": controller.firstNameController.text,
+        "lastname": controller.lastNameController.text,
+        "email": controller.emailController.text,
+        "password": controller.passwordController.text,
+        "password_confirmation": controller.passwordConfirmationController.text,
+      };
+
+      dynamic response = await apiClient.post('/register', data: signupObj);
+
+      // sample response
+      // {
+      //     "statusCode": "200",
+      //     "message": "OTP sent to your email address",
+      //     "email_otp_status": "email otp sent"
+      // }
+      dynamic responseData = response.data;
+
+      // prefs.setString('access_token', responseData['access_token']);
+      // prefs.setString('fullName', resondeData['user']['firstname']);
+      prefs.setString('email', controller.emailController.text);
+      Get.snackbar('Success', responseData['message']);
+      Get.toNamed(AppRoutes.signUpVerificationScreen);
+    } catch (onError) {
+      print(onError);
+      Get.snackbar('Error', onError.toString());
+    }
   }
 
   onTapBtntf() async {

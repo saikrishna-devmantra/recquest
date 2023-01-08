@@ -3,13 +3,16 @@ import 'package:recquest_21/presentation/sign_up_screen/models/sign_up_model.dar
 import 'package:flutter/material.dart';
 
 class SignUpController extends GetxController {
-  TextEditingController groupFiftyFiveController = TextEditingController();
+  TextEditingController firstNameController = TextEditingController();
+
+  TextEditingController lastNameController = TextEditingController();
 
   TextEditingController emailController = TextEditingController();
 
-  TextEditingController groupFiftyFourController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
-  TextEditingController groupFiftySixController = TextEditingController();
+  TextEditingController passwordConfirmationController =
+      TextEditingController();
 
   Rx<SignUpModel> signUpModelObj = SignUpModel().obs;
 
@@ -25,9 +28,10 @@ class SignUpController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    groupFiftyFiveController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
     emailController.dispose();
-    groupFiftyFourController.dispose();
-    groupFiftySixController.dispose();
+    passwordController.dispose();
+    passwordConfirmationController.dispose();
   }
 }

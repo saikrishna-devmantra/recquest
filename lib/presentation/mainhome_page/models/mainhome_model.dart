@@ -3,5 +3,5 @@ import 'mainhome_item_model.dart';
 
 class MainhomeModel {
   RxList<MainhomeItemModel> mainhomeItemList =
-      RxList.filled(3, MainhomeItemModel());
+      RxList.filled(5, MainhomeItemModel());
 }

@@ -459,11 +459,6 @@ class MapViewScreen extends GetWidget<MapViewController> {
             ),
           ),
         ),
-        bottomNavigationBar: CustomBottomBar(
-          onChanged: (BottomBarEnum type) {
-            Get.toNamed(getCurrentRoute(type), id: 1);
-          },
-        ),
         floatingActionButton: CustomFloatingButton(
           height: 51,
           width: 51,

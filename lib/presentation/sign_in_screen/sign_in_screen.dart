@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:recquest_21/api/api_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../my_profile_screen/models/my_profile_model.dart';
 import 'controller/sign_in_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
@@ -234,12 +235,12 @@ class SignInScreen extends GetWidget<SignInController> {
       dynamic response = await apiClient.post('/login', data: loginObj);
 
       dynamic resondeData = response.data;
-
+      MyProfileModel userprofile = MyProfileModel.fromJson(response.data);
       prefs.setString('access_token', resondeData['access_token']);
       prefs.setString('fullName', resondeData['user']['firstname']);
       prefs.setString('email', resondeData['user']['email']);
       Get.snackbar('Success', 'Login Success.');
-      Get.toNamed(AppRoutes.mainhomeContainerScreen);
+      Get.toNamed(AppRoutes.mainhomeContainerScreen, arguments: userprofile);
     } catch (onError) {
       print(onError);
       Get.snackbar('Error', onError.toString());

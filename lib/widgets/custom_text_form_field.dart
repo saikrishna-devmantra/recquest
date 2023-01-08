@@ -239,4 +239,5 @@ enum TextFormFieldFontStyle {
   PoppinsRegular14,
   AsapRomanRegular14,
   AsapRomanRegular14Bluegray900b2,
+  PoppinsBlack14,
 }

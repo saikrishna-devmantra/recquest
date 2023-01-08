@@ -1,3 +1,6 @@
+import 'package:recquest_21/api/api_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'controller/forgot_password_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
@@ -164,8 +167,35 @@ class ForgotPasswordScreen extends GetWidget<ForgotPasswordController> {
     Get.toNamed(AppRoutes.signInScreen);
   }
 
-  onTapContinue() {
-    Get.toNamed(AppRoutes.forgotPasswordVerificationScreen);
+  onTapContinue() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      APIHandler apiClient = APIHandler();
+
+      dynamic forgotPswdObj = {
+        "email": controller.emailController.text,
+      };
+
+      dynamic response =
+          await apiClient.post('/forgotPassword', data: forgotPswdObj);
+
+      // sample response
+      // {
+      //     "statusCode": "200",
+      //     "message": "OTP sent to your email address",
+      //     "email_otp_status": "email otp sent",
+      //     "uid": 1
+      // }
+      dynamic responseData = response.data;
+
+      prefs.setString('email', controller.emailController.text);
+      prefs.setString('uid', responseData['uid']);
+      Get.snackbar('Success', responseData['message']);
+      Get.toNamed(AppRoutes.forgotPasswordVerificationScreen);
+    } catch (onError) {
+      print(onError);
+      Get.snackbar('Error', onError.toString());
+    }
   }
 
   onTapBtntf() async {

@@ -3,9 +3,9 @@ import 'package:recquest_21/presentation/reset_password_screen/models/reset_pass
 import 'package:flutter/material.dart';
 
 class ResetPasswordController extends GetxController {
-  TextEditingController groupFiftyFourController = TextEditingController();
+  TextEditingController newPassword = TextEditingController();
 
-  TextEditingController groupFiftySixController = TextEditingController();
+  TextEditingController confirmNewPassword = TextEditingController();
 
   Rx<ResetPasswordModel> resetPasswordModelObj = ResetPasswordModel().obs;
 
@@ -21,7 +21,7 @@ class ResetPasswordController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    groupFiftyFourController.dispose();
-    groupFiftySixController.dispose();
+    newPassword.dispose();
+    confirmNewPassword.dispose();
   }
 }

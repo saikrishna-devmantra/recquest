@@ -1,3 +1,8 @@
+import 'package:recquest_21/api/api_handler.dart';
+import 'package:recquest_21/core/utils/validation_functions.dart';
+import 'package:recquest_21/widgets/custom_text_form_field.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'controller/sign_up_verification_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:recquest_21/core/app_export.dart';
@@ -48,60 +53,28 @@ class SignUpVerificationScreen extends GetWidget<SignUpVerificationController> {
                                   textAlign: TextAlign.left,
                                   style: AppStyle.txtPoppinsMedium16Black900
                                       .copyWith(height: 1.56)))),
-                      Padding(
-                          padding: getPadding(left: 20, top: 26, right: 20),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Container(
-                                    width: getSize(55.00),
-                                    padding: getPadding(
-                                        left: 21, top: 6, right: 21, bottom: 6),
-                                    decoration: AppDecoration.txtOutlineGray600
-                                        .copyWith(
-                                            borderRadius: BorderRadiusStyle
-                                                .txtRoundedBorder14),
-                                    child: Text("lbl2".tr,
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: AppStyle.txtAsapRomanRegular32)),
-                                Container(
-                                    width: getSize(55.00),
-                                    padding: getPadding(
-                                        left: 21, top: 6, right: 21, bottom: 6),
-                                    decoration: AppDecoration.txtOutlineGray600
-                                        .copyWith(
-                                            borderRadius: BorderRadiusStyle
-                                                .txtRoundedBorder14),
-                                    child: Text("lbl2".tr,
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: AppStyle.txtAsapRomanRegular32)),
-                                Container(
-                                    width: getSize(55.00),
-                                    padding: getPadding(
-                                        left: 21, top: 6, right: 21, bottom: 6),
-                                    decoration: AppDecoration.txtOutlineGray600
-                                        .copyWith(
-                                            borderRadius: BorderRadiusStyle
-                                                .txtRoundedBorder14),
-                                    child: Text("lbl2".tr,
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: AppStyle.txtAsapRomanRegular32)),
-                                Container(
-                                    width: getSize(55.00),
-                                    padding: getPadding(
-                                        left: 21, top: 6, right: 21, bottom: 6),
-                                    decoration: AppDecoration.txtOutlineGray600
-                                        .copyWith(
-                                            borderRadius: BorderRadiusStyle
-                                                .txtRoundedBorder14),
-                                    child: Text("lbl2".tr,
-                                        overflow: TextOverflow.ellipsis,
-                                        textAlign: TextAlign.left,
-                                        style: AppStyle.txtAsapRomanRegular32))
-                              ])),
+                      CustomTextFormField(
+                          width: 340,
+                          focusNode: FocusNode(),
+                          controller: controller.otpinputController,
+                          hintText: "lbl_otp".tr,
+                          margin: getMargin(top: 47),
+                          fontStyle: TextFormFieldFontStyle.PoppinsBlack14,
+                          textInputAction: TextInputAction.done,
+                          suffix: Container(
+                              margin: getMargin(
+                                  left: 30, top: 13, right: 16, bottom: 13),
+                              child: CustomImageView(
+                                  svgPath: ImageConstant.imgCheckmark26x24)),
+                          suffixConstraints: BoxConstraints(
+                              minWidth: getHorizontalSize(24.00),
+                              minHeight: getVerticalSize(26.00)),
+                          validator: (value) {
+                            if (!isText(value)) {
+                              return "Please enter valid text";
+                            }
+                            return null;
+                          }),
                       CustomButton(
                           height: 48,
                           width: 300,
@@ -210,8 +183,50 @@ class SignUpVerificationScreen extends GetWidget<SignUpVerificationController> {
     Get.toNamed(AppRoutes.signUpScreen);
   }
 
-  onTapContinue() {
-    Get.toNamed(AppRoutes.signInScreen);
+  onTapContinue() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      APIHandler apiClient = APIHandler();
+
+      dynamic signupOTPObj = {
+        "email_otp": controller.otpinputController.text,
+        "email": prefs.getString("email")
+      };
+
+      dynamic response =
+          await apiClient.post('/validateRegistrationOTP', data: signupOTPObj);
+
+      // sample response
+      // {
+      //     "statusCode": "201",
+      //     "message": "OTP Verified Successfully",
+      //     "user": {
+      //         "id": 3,
+      //         "firstname": "Abhi",
+      //         "lastname": "CA",
+      //         "email": "optymoney.tax3@gmail.com",
+      //         "email_verified_at": null,
+      //         "two_factor_secret": null,
+      //         "two_factor_recovery_codes": null,
+      //         "two_factor_confirmed_at": null,
+      //         "current_team_id": null,
+      //         "profile_photo_path": null,
+      //         "created_at": "2023-01-07T06:25:59.000000Z",
+      //         "updated_at": "2023-01-07T10:52:34.000000Z",
+      //         "fb_id": null,
+      //         "verificationStatus": "Verified"
+      //     }
+      // }
+      dynamic responseData = response.data;
+      print(responseData);
+      // prefs.setString('access_token', responseData['access_token']);
+
+      Get.snackbar('Success', responseData['message']);
+      Get.toNamed(AppRoutes.signInScreen);
+    } catch (onError) {
+      print(onError);
+      Get.snackbar('Error', onError.toString());
+    }
   }
 
   onTapBtntf() async {

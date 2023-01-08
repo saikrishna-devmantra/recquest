@@ -26,7 +26,7 @@ class MainhomePage extends StatelessWidget {
                 leading: AppbarCircleimage(
                     imagePath: ImageConstant.imgOvalcopy5,
                     margin: getMargin(left: 11, top: 10, bottom: 10),
-                    onTap: onTapOvalCopyFive),
+                    onTap: onTaponTapUserProfile),
                 title: Row(children: [
                   Padding(
                       padding: getPadding(left: 59, top: 12, bottom: 15),
@@ -113,7 +113,7 @@ class MainhomePage extends StatelessWidget {
     Get.toNamed(AppRoutes.eventDetailsAboutScreen);
   }
 
-  onTapOvalCopyFive() {
+  onTaponTapUserProfile() {
     Get.toNamed(AppRoutes.myProfileScreen);
   }
 
