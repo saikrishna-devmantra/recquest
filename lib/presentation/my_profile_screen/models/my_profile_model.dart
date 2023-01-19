@@ -3,7 +3,7 @@ class MyProfileModel {
   String? _firstname;
   String? _lastname;
   String? _email;
-  Null? _emailVerifiedAt;
+  String? _emailVerifiedAt;
   Null? _twoFactorSecret;
   Null? _twoFactorRecoveryCodes;
   Null? _twoFactorConfirmedAt;
